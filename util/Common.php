@@ -25,4 +25,7 @@ class Common
         if($planType==='premium')
             return self::$PLAN_PREMIUM_PRICE;
     }
+    public static function executeCommand($cmd){
+        return shell_exec($cmd);
+    }
 }
