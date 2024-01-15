@@ -4,7 +4,7 @@ class VulScanner
 {
     var $rawResult;
     var $result;
-    var string $url;
+    var $url;
 
     function __construct($url){
         $this->url=$url;
