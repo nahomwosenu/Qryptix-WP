@@ -25,7 +25,7 @@ class VulScanner
             return;
         }
         for($i=0;$i<count($lines) && $i<100;$i++){
-            if(strstr('[CVE-',$lines[$i])){
+            if(strstr($lines[$i],'[CVE-')){
                 //echo "PROCESSING LINE: ".$lines[$i];
                 $collect[]=$this->parseLine($lines[$i]);
             }
