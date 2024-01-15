@@ -1,5 +1,6 @@
 {
   "require": {
+    "php": ">=7.2",
     "kunalvarma05/dropbox-php-sdk": "^0.4.2"
   }
 }
