@@ -1,4 +1,5 @@
 <?php
+header("Content-Type: application/json");
 require_once __DIR__."/../../../util/VulScanner.php";
 if(isset($_GET['scan']) && isset($_GET['domain'])){
     $domain=$_GET['domain'];
