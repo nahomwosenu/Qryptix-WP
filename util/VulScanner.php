@@ -19,19 +19,19 @@ class VulScanner
     {
         $collect=array();
         $lines=explode(PHP_EOL,$this->rawResult);
-        echo "LINES COUNT: ".count($lines);
+        //echo "LINES COUNT: ".count($lines);
         if(count($lines)==0){
             $this->result=array();
             return;
         }
-        for($i=0;$i<count($lines) && $i<100;$i++){
+        for($i=0;$i<count($lines) && $i<1000;$i++){
             if(strstr($lines[$i],'[CVE-')){
                 //echo "PROCESSING LINE: ".$lines[$i];
                 $collect[]=$this->parseLine($lines[$i]);
             }
         }
         usort($collect,function($a,$b){
-            return $a['score']>$b['score'];
+            return $a['score']<$b['score'];
         });
         if(count($collect)>10){
             $this->result=array_slice($collect,0,10);
@@ -54,7 +54,7 @@ class VulScanner
             "score"=>$score,
             "description"=>$description
         ];
-        echo "CVE SCORE IS: ".$score;
+        //echo "CVE SCORE IS: ".$score;
         return $obj;
     }
 
