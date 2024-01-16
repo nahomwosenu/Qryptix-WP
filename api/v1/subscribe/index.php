@@ -5,6 +5,7 @@ header('Access-Control-Allow-Methods: GET, POST');
 require_once __DIR__."/../../../model/Client.php";
 require_once __DIR__."/../../../model/ClientPlan.php";
 require_once __DIR__."/../../../util/Common.php";
+require_once __DIR__."/../../../log.php";
 
 if(isset($_POST['register'])){
     $client = new Client();

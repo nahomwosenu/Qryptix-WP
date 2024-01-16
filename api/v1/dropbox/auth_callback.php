@@ -4,6 +4,7 @@ require_once __DIR__."/../../../model/Settings.php";
 require_once __DIR__."/../../../model/Client.php";
 require_once __DIR__."/../../../util/Common.php";
 require_once __DIR__."/../../../model/URLMap.php";
+require_once __DIR__."/../../../log.php";
 
 DropboxAuth::init();
 
