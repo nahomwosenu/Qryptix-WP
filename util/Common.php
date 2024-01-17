@@ -26,8 +26,8 @@ class Common
             return self::$PLAN_PREMIUM_PRICE;
     }
     public static function executeCommand($cmd){
-        //return shell_exec($cmd);
-        $timeout = 30;
+        return shell_exec($cmd);
+        /*$timeout = 30;
         $descriptor = array(
             0 => array("pipe", "r"), // stdin
             1 => array("pipe", "w"), // stdout
@@ -67,6 +67,6 @@ class Common
             // Print an error message
             //echo "The process could not be opened\n";
             return "";
-        }
+        }*/
     }
 }

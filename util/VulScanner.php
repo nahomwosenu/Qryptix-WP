@@ -5,17 +5,20 @@ class VulScanner
     var $rawResult;
     var $result;
     var $url;
+    var $clientId;
 
-    function __construct($url){
+    function __construct($url,$clientId){
         $this->url=$url;
+        $this->clientId=$clientId;
     }
     function startScan(){
-        $command="nmap -sV --script=vulscan/vulscan.nse $this->url";
+        //$command="nmap -sV --script=vulscan/vulscan.nse $this->url";
+        $command=__DIR__."../scripts/scanner-task.php id=$this->clientId domain=$this->url &";
         $this->rawResult=Common::executeCommand($command);
-        $this->parse();
+        //$this->parse();
     }
 
-    private function parse()
+    public function parse()
     {
         $collect=array();
         $lines=explode(PHP_EOL,$this->rawResult);
