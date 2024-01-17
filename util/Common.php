@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__."../log.php";
+require_once __DIR__."/../log.php";
 class Common
 {
     static $SETTING_DROPBOX_AUTH="dropbox_auth";
