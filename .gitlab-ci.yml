@@ -1,0 +1,14 @@
+stages:
+  - deploy
+
+before_script:
+  - source ~/.bashrc
+deploy-app:
+  stage: deploy
+  tags:
+    - master
+  script:
+    - sudo /home/phpweb/ecsmid-wp/deploy.sh
+    - echo "deployment completed successfully"
+  only:
+    - master
