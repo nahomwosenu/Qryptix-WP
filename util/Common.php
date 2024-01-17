@@ -1,5 +1,5 @@
 <?php
-
+require_once __DIR__."../log.php";
 class Common
 {
     static $SETTING_DROPBOX_AUTH="dropbox_auth";
@@ -26,7 +26,9 @@ class Common
             return self::$PLAN_PREMIUM_PRICE;
     }
     public static function executeCommand($cmd){
-        return shell_exec($cmd);
+        $result=shell_exec($cmd);
+        d("shell exect from common.php returns: ".$result);
+        return $result;
         /*$timeout = 30;
         $descriptor = array(
             0 => array("pipe", "r"), // stdin

@@ -13,7 +13,7 @@ class VulScanner
     }
     function startScan(){
         //$command="nmap -sV --script=vulscan/vulscan.nse $this->url";
-        $command=__DIR__."../scripts/scanner-task.php id=$this->clientId domain=$this->url &";
+        $command="/usr/bin/php ".__DIR__."../scripts/scanner-task.php id=$this->clientId domain=$this->url &";
         $this->rawResult=Common::executeCommand($command);
         //$this->parse();
     }
