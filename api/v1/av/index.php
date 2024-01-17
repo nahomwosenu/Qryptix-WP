@@ -14,7 +14,7 @@ if(!isset($headers['Authorization'])){
     $r['message']='Missing api key';
     die(json_encode($r));
 }
-$apiKey=trim(explode(' ',$headers['Authorization']));
+$apiKey=trim(explode(' ',$headers['Authorization'])[1]);
 $client=Client::getByAPI($apiKey);
 if($client===null){
     $r=array();
