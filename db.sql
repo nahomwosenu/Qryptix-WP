@@ -26,3 +26,9 @@ create table url_map(
     clientId int,
     url varchar(255)
 );
+create table cache(
+    id int primary key auto_increment,
+    clientId int,
+    cacheKey varchar(255),
+    data json
+);

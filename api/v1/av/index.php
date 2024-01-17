@@ -16,6 +16,12 @@ if(!isset($headers['Authorization'])){
 }
 $apiKey=trim(explode(' ',$headers['Authorization']));
 $client=Client::getByAPI($apiKey);
+if($client===null){
+    $r=array();
+    $r['status']='error';
+    $r['message']='Invalid or Missing api key';
+    die(json_encode($r));
+}
 if(isset($_GET['scan']) && isset($_GET['domain'])){
     $domain=$_GET['domain'];
     $scan=new VulScanner($domain, $client['id']);
