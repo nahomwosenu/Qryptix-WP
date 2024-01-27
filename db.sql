@@ -1,5 +1,5 @@
-create database ecsmid_wp;
-    use ecsmid_wp;
+create database qryptix_wp;
+    use qryptix_wp;
         create table client(
             id int primary key auto_increment,
             instanceId varchar(255),

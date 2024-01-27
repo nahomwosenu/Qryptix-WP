@@ -8,7 +8,7 @@ deploy-app:
   tags:
     - master
   script:
-    - sudo /home/phpweb/ecsmid-wp/deploy.sh
+    - sudo /home/phpweb/qryptix-wp/deploy.sh
     - echo "deployment completed successfully"
   only:
     - master

@@ -17,7 +17,7 @@ if(isset($_POST['register'])){
     if(Client::exists($client->email)){
         $rs=array();
         $rs['status']='error';
-        $rs['message']='This email address is already taken, if you forget your password you can reset it from your ECSMID dashboard';
+        $rs['message']='This email address is already taken, if you forget your password you can reset it from your Qryptix dashboard';
         die(json_encode($rs));
     }
     $id=Client::save($client);

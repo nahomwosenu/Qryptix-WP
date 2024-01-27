@@ -18,7 +18,7 @@ class DropboxAuth
         $dropbox = new Dropbox(DropboxAuth::$app);
         $root = "http://localhost"; //(!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
         DropboxAuth::$authHelper = $dropbox->getAuthHelper();
-        DropboxAuth::$callbackUrl=$root."/ecsmid-backend/api/v1/dropbox/auth_callback.php";
+        DropboxAuth::$callbackUrl=$root."/qryptix-backend/api/v1/dropbox/auth_callback.php";
     }
 
     static function oauth2($client_id){

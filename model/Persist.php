@@ -5,7 +5,7 @@ class Persist
     static $server='localhost';
     static $user='nahom';
     static $pass='AlphaGeek23';
-    static $db='ecsmid_wp';
+    static $db='qryptix_wp';
     static function getType($data){
         $type = gettype($data);
 
